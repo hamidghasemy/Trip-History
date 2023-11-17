@@ -1,24 +1,241 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Trips_History" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJa-cQ-Ns2" customClass="CustomeNeshanMapView" customModule="Trips_History" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxo-9B-qEh">
+                                        <rect key="frame" x="20" y="686" width="137.66666666666666" height="57"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="New Trip" subtitle="First Mark the Map">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="QQk-Js-Vg1" kind="show" identifier="newTripSegue" id="Odt-qW-mgx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2A-pr-HZM">
+                                        <rect key="frame" x="20" y="595.33333333333337" width="70.333333333333329" height="40.333333333333371"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Trips">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Pnl-Pb-pg4" kind="show" identifier="tripsListSegue" id="Me9-0W-foM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dsn-nC-jkK">
+                                        <rect key="frame" x="20" y="640.66666666666663" width="140.33333333333334" height="40.333333333333371"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="My Location">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="myLocClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B8g-2F-2Lr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Dsn-nC-jkK" firstAttribute="leading" secondItem="cJa-cQ-Ns2" secondAttribute="leading" constant="20" id="AHv-AB-P4N"/>
+                                    <constraint firstItem="l2A-pr-HZM" firstAttribute="leading" secondItem="cJa-cQ-Ns2" secondAttribute="leading" constant="20" id="Qzr-Dk-RIz"/>
+                                    <constraint firstItem="Dsn-nC-jkK" firstAttribute="top" secondItem="l2A-pr-HZM" secondAttribute="bottom" constant="5" id="VOC-yd-9JW"/>
+                                    <constraint firstItem="Dxo-9B-qEh" firstAttribute="top" secondItem="Dsn-nC-jkK" secondAttribute="bottom" constant="5" id="oSX-ym-UzQ"/>
+                                    <constraint firstItem="Dxo-9B-qEh" firstAttribute="leading" secondItem="cJa-cQ-Ns2" secondAttribute="leading" constant="20" id="yBK-yS-KoJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dxo-9B-qEh" secondAttribute="bottom" constant="50" id="z4x-dq-ewc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cJa-cQ-Ns2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5yg-y8-WM5"/>
+                            <constraint firstAttribute="bottom" secondItem="cJa-cQ-Ns2" secondAttribute="bottom" id="GFB-MY-XX2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cJa-cQ-Ns2" secondAttribute="trailing" id="OsL-y6-Hec"/>
+                            <constraint firstItem="cJa-cQ-Ns2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QD8-7g-8SM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="map" destination="cJa-cQ-Ns2" id="DJC-On-XXY"/>
+                        <outlet property="newEditButton" destination="Dxo-9B-qEh" id="PiI-LA-kZC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-260.30534351145036" y="-235.21126760563382"/>
+        </scene>
+        <!--Trip View Controller-->
+        <scene sceneID="QC5-Vt-fsd">
+            <objects>
+                <viewController id="QQk-Js-Vg1" customClass="TripViewController" customModule="Trips_History" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="id4-S0-uCJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLY-4f-xrC">
+                                <rect key="frame" x="242" y="402" width="120" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save Trip"/>
+                                <connections>
+                                    <action selector="saveClicked:" destination="QQk-Js-Vg1" eventType="touchUpInside" id="ymN-Py-Zex"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPj-81-2Lm">
+                                <rect key="frame" x="242" y="445" width="120" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Remove Trip">
+                                    <color key="baseBackgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="removeClicked:" destination="QQk-Js-Vg1" eventType="touchUpInside" id="RS2-0j-4AI"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KCO-FZ-3sE">
+                                <rect key="frame" x="0.0" y="209" width="393" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="d2t-GJ-VCp">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="300" height="100"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="footerReferenceSize">
+                                            <size key="value" width="300" height="100"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pHk-e5-ugP">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="QQk-Js-Vg1" id="ZTQ-cJ-CVM"/>
+                                    <outlet property="delegate" destination="QQk-Js-Vg1" id="qCH-SA-kwC"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add your friends to this trip ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YtP-Zg-42R">
+                                <rect key="frame" x="10" y="139" width="367" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Trip Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gQ1-5g-Xfl">
+                                <rect key="frame" x="33" y="403" width="186" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pIj-6h-P0l"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IdG-q9-paq"/>
+                    <connections>
+                        <outlet property="friendsCollectionView" destination="KCO-FZ-3sE" id="xhg-Vz-g34"/>
+                        <outlet property="removeButton" destination="HPj-81-2Lm" id="WX5-tr-iv0"/>
+                        <outlet property="saveButton" destination="yLY-4f-xrC" id="wp0-89-ncj"/>
+                        <outlet property="titleTextField" destination="gQ1-5g-Xfl" id="n80-DB-SiY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NT3-RJ-bD0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1183.969465648855" y="-116.19718309859155"/>
+        </scene>
+        <!--Trips List View Controller-->
+        <scene sceneID="zRA-59-eSS">
+            <objects>
+                <viewController id="Pnl-Pb-pg4" customClass="TripsListViewController" customModule="Trips_History" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hr2-eF-iyC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Wex-Xs-Onm">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="cv3-rP-OuG" detailTextLabel="EwH-if-Bqg" imageView="107-L9-peN" style="IBUITableViewCellStyleSubtitle" id="K86-Xz-Xg6">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K86-Xz-Xg6" id="3jp-Li-ouB">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cv3-rP-OuG">
+                                                    <rect key="frame" x="78.666666666666686" y="6.0000000000000009" width="25" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EwH-if-Bqg">
+                                                    <rect key="frame" x="78.666666666666686" y="22.333333333333336" width="32.666666666666664" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="map-green-pin.png" id="107-L9-peN">
+                                                    <rect key="frame" x="20" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Pnl-Pb-pg4" id="qkm-0D-dde"/>
+                                    <outlet property="delegate" destination="Pnl-Pb-pg4" id="7gY-rD-8VZ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xb9-gi-Uvt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wex-Xs-Onm" firstAttribute="trailing" secondItem="Xb9-gi-Uvt" secondAttribute="trailing" id="2A5-zC-teM"/>
+                            <constraint firstItem="Wex-Xs-Onm" firstAttribute="leading" secondItem="Xb9-gi-Uvt" secondAttribute="leading" id="8tm-4A-YvR"/>
+                            <constraint firstItem="Xb9-gi-Uvt" firstAttribute="bottom" secondItem="Wex-Xs-Onm" secondAttribute="bottom" id="IRg-2P-L2U"/>
+                            <constraint firstItem="Wex-Xs-Onm" firstAttribute="top" secondItem="hr2-eF-iyC" secondAttribute="top" id="iPr-OI-OqT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SOf-TT-s58"/>
+                    <connections>
+                        <outlet property="tripsTableView" destination="Wex-Xs-Onm" id="gSY-tP-J5Z"/>
+                        <segue destination="QQk-Js-Vg1" kind="show" identifier="editTripSegue" id="plc-rl-LyC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s0J-rG-77I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1183.969465648855" y="-823.23943661971839"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Odt-qW-mgx"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="map-green-pin.png" width="384" height="384"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

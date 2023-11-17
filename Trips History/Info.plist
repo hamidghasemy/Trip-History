@@ -21,5 +21,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSContactsUsageDescription</key>
+	<string>We need access to contacts.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need access to your location.</string>
 </dict>
 </plist>

@@ -7,25 +7,69 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68164EA02B04CE4E00C89439 /* ContactHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68164E9F2B04CE4E00C89439 /* ContactHelper.swift */; };
+		68164EA22B0506D300C89439 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68164EA12B0506D300C89439 /* CoreDataHelper.swift */; };
+		68164EB62B05411500C89439 /* TripViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68164EB52B05411500C89439 /* TripViewModel.swift */; };
+		68164EB82B0559AF00C89439 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68164EB72B0559AF00C89439 /* AlertHelper.swift */; };
+		68164EBC2B05738300C89439 /* map-red-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 68164EBA2B05738300C89439 /* map-red-pin.png */; };
+		68164EBD2B05738300C89439 /* map-green-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 68164EBB2B05738300C89439 /* map-green-pin.png */; };
 		68261C772B03941C002DCC57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68261C762B03941C002DCC57 /* AppDelegate.swift */; };
-		68261C792B03941C002DCC57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68261C782B03941C002DCC57 /* SceneDelegate.swift */; };
-		68261C7B2B03941C002DCC57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68261C7A2B03941C002DCC57 /* ViewController.swift */; };
+		68261C7B2B03941C002DCC57 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68261C7A2B03941C002DCC57 /* MainViewController.swift */; };
 		68261C7E2B03941C002DCC57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68261C7C2B03941C002DCC57 /* Main.storyboard */; };
 		68261C812B03941C002DCC57 /* Trips_History.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68261C7F2B03941C002DCC57 /* Trips_History.xcdatamodeld */; };
 		68261C832B03941D002DCC57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68261C822B03941D002DCC57 /* Assets.xcassets */; };
 		68261C862B03941D002DCC57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68261C842B03941D002DCC57 /* LaunchScreen.storyboard */; };
+		689F78C12B0694570061431B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F78C02B0694570061431B /* LocationManager.swift */; };
+		689F78C32B0694B70061431B /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F78C22B0694B70061431B /* LocationViewModel.swift */; };
+		689F78C52B06A2D60061431B /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 689F78C42B06A2D60061431B /* map.png */; };
+		689F78C92B07FCB30061431B /* CustomeNeshanMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F78C82B07FCB30061431B /* CustomeNeshanMapView.swift */; };
+		689F78D02B082C820061431B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F78CF2B082C820061431B /* SceneDelegate.swift */; };
+		68DF73F62B039BCF0084BB44 /* neshan.license in Resources */ = {isa = PBXBuildFile; fileRef = 68DF73F52B039BCF0084BB44 /* neshan.license */; };
+		68DF73F92B03CC460084BB44 /* NeshanHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DF73F82B03CC460084BB44 /* NeshanHelper.m */; };
+		68DF73FD2B03CF900084BB44 /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF73FC2B03CF900084BB44 /* TripViewController.swift */; };
+		68DF73FF2B03E16A0084BB44 /* TripsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF73FE2B03E16A0084BB44 /* TripsListViewController.swift */; };
+		68DF740B2B0404100084BB44 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF740A2B0404100084BB44 /* FriendCell.swift */; };
+		68DF740D2B04049D0084BB44 /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68DF740C2B04049D0084BB44 /* FriendCell.xib */; };
+		68DF740F2B040B420084BB44 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF740E2B040B420084BB44 /* PersonViewModel.swift */; };
+		68DF74112B04AB540084BB44 /* NewFriendFotter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF74102B04AB540084BB44 /* NewFriendFotter.swift */; };
+		68DF74132B04AB740084BB44 /* NewFriendFotter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68DF74122B04AB740084BB44 /* NewFriendFotter.xib */; };
+		B599E809B486F3CC5219F73E /* Pods_Trips_History.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C8E596D2FBF4A69389DDBE /* Pods_Trips_History.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		60C8E596D2FBF4A69389DDBE /* Pods_Trips_History.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trips_History.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68164E9F2B04CE4E00C89439 /* ContactHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactHelper.swift; sourceTree = "<group>"; };
+		68164EA12B0506D300C89439 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		68164EB52B05411500C89439 /* TripViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewModel.swift; sourceTree = "<group>"; };
+		68164EB72B0559AF00C89439 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		68164EBA2B05738300C89439 /* map-red-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-red-pin.png"; sourceTree = "<group>"; };
+		68164EBB2B05738300C89439 /* map-green-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-green-pin.png"; sourceTree = "<group>"; };
 		68261C732B03941C002DCC57 /* Trips History.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trips History.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68261C762B03941C002DCC57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		68261C782B03941C002DCC57 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		68261C7A2B03941C002DCC57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		68261C7A2B03941C002DCC57 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		68261C7D2B03941C002DCC57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68261C802B03941C002DCC57 /* Trips_History.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Trips_History.xcdatamodel; sourceTree = "<group>"; };
 		68261C822B03941D002DCC57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68261C852B03941D002DCC57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68261C872B03941D002DCC57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		689F78C02B0694570061431B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		689F78C22B0694B70061431B /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		689F78C42B06A2D60061431B /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		689F78C82B07FCB30061431B /* CustomeNeshanMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeNeshanMapView.swift; sourceTree = "<group>"; };
+		689F78CF2B082C820061431B /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		68DF73F42B039AAB0084BB44 /* Trips-History-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Trips-History-Bridging-Header.h"; sourceTree = "<group>"; };
+		68DF73F52B039BCF0084BB44 /* neshan.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = neshan.license; sourceTree = "<group>"; };
+		68DF73F72B03CC460084BB44 /* NeshanHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeshanHelper.h; sourceTree = "<group>"; };
+		68DF73F82B03CC460084BB44 /* NeshanHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeshanHelper.m; sourceTree = "<group>"; };
+		68DF73FC2B03CF900084BB44 /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
+		68DF73FE2B03E16A0084BB44 /* TripsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsListViewController.swift; sourceTree = "<group>"; };
+		68DF740A2B0404100084BB44 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		68DF740C2B04049D0084BB44 /* FriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
+		68DF740E2B040B420084BB44 /* PersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
+		68DF74102B04AB540084BB44 /* NewFriendFotter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFriendFotter.swift; sourceTree = "<group>"; };
+		68DF74122B04AB740084BB44 /* NewFriendFotter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFriendFotter.xib; sourceTree = "<group>"; };
+		94B0B61B4D6F74B7C7E15BBA /* Pods-Trips History.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trips History.debug.xcconfig"; path = "Target Support Files/Pods-Trips History/Pods-Trips History.debug.xcconfig"; sourceTree = "<group>"; };
+		D053D1FC0855C10DF506FF46 /* Pods-Trips History.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trips History.release.xcconfig"; path = "Target Support Files/Pods-Trips History/Pods-Trips History.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +77,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B599E809B486F3CC5219F73E /* Pods_Trips_History.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68164EB92B05733A00C89439 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				68DF73F52B039BCF0084BB44 /* neshan.license */,
+				689F78CE2B081CD60061431B /* Map Pins */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		68164EBE2B05DA5C00C89439 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				68164E9F2B04CE4E00C89439 /* ContactHelper.swift */,
+				68164EA12B0506D300C89439 /* CoreDataHelper.swift */,
+				68DF73F72B03CC460084BB44 /* NeshanHelper.h */,
+				68DF73F82B03CC460084BB44 /* NeshanHelper.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		68261C6A2B03941C002DCC57 = {
 			isa = PBXGroup;
 			children = (
 				68261C752B03941C002DCC57 /* Trips History */,
 				68261C742B03941C002DCC57 /* Products */,
+				729B6779E1E3AB488E00254C /* Pods */,
+				71FBE710AABA4D0FF8CBEE36 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +125,106 @@
 		68261C752B03941C002DCC57 /* Trips History */ = {
 			isa = PBXGroup;
 			children = (
+				689F78CF2B082C820061431B /* SceneDelegate.swift */,
 				68261C762B03941C002DCC57 /* AppDelegate.swift */,
-				68261C782B03941C002DCC57 /* SceneDelegate.swift */,
-				68261C7A2B03941C002DCC57 /* ViewController.swift */,
-				68261C7C2B03941C002DCC57 /* Main.storyboard */,
 				68261C822B03941D002DCC57 /* Assets.xcassets */,
-				68261C842B03941D002DCC57 /* LaunchScreen.storyboard */,
+				68164EBE2B05DA5C00C89439 /* Helpers */,
 				68261C872B03941D002DCC57 /* Info.plist */,
+				68261C842B03941D002DCC57 /* LaunchScreen.storyboard */,
+				68261C7C2B03941C002DCC57 /* Main.storyboard */,
+				68164EB92B05733A00C89439 /* Resources */,
+				689F78BF2B0686A40061431B /* Services */,
 				68261C7F2B03941C002DCC57 /* Trips_History.xcdatamodeld */,
+				68DF73F42B039AAB0084BB44 /* Trips-History-Bridging-Header.h */,
+				68DF74032B03EC810084BB44 /* ViewModels */,
+				68DF74022B03EC790084BB44 /* Views */,
 			);
 			path = "Trips History";
+			sourceTree = "<group>";
+		};
+		689F78BF2B0686A40061431B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				689F78C02B0694570061431B /* LocationManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		689F78CA2B081BB80061431B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				68DF73FC2B03CF900084BB44 /* TripViewController.swift */,
+				68DF73FE2B03E16A0084BB44 /* TripsListViewController.swift */,
+				68261C7A2B03941C002DCC57 /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		689F78CB2B081BC90061431B /* CellViews */ = {
+			isa = PBXGroup;
+			children = (
+				68DF740A2B0404100084BB44 /* FriendCell.swift */,
+				68DF740C2B04049D0084BB44 /* FriendCell.xib */,
+				68DF74102B04AB540084BB44 /* NewFriendFotter.swift */,
+				68DF74122B04AB740084BB44 /* NewFriendFotter.xib */,
+			);
+			path = CellViews;
+			sourceTree = "<group>";
+		};
+		689F78CD2B081C200061431B /* Custome */ = {
+			isa = PBXGroup;
+			children = (
+				68164EB72B0559AF00C89439 /* AlertHelper.swift */,
+				689F78C82B07FCB30061431B /* CustomeNeshanMapView.swift */,
+			);
+			path = Custome;
+			sourceTree = "<group>";
+		};
+		689F78CE2B081CD60061431B /* Map Pins */ = {
+			isa = PBXGroup;
+			children = (
+				68164EBB2B05738300C89439 /* map-green-pin.png */,
+				689F78C42B06A2D60061431B /* map.png */,
+				68164EBA2B05738300C89439 /* map-red-pin.png */,
+			);
+			path = "Map Pins";
+			sourceTree = "<group>";
+		};
+		68DF74022B03EC790084BB44 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				689F78CD2B081C200061431B /* Custome */,
+				689F78CB2B081BC90061431B /* CellViews */,
+				689F78CA2B081BB80061431B /* ViewControllers */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		68DF74032B03EC810084BB44 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				68DF740E2B040B420084BB44 /* PersonViewModel.swift */,
+				68164EB52B05411500C89439 /* TripViewModel.swift */,
+				689F78C22B0694B70061431B /* LocationViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		71FBE710AABA4D0FF8CBEE36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60C8E596D2FBF4A69389DDBE /* Pods_Trips_History.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		729B6779E1E3AB488E00254C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				94B0B61B4D6F74B7C7E15BBA /* Pods-Trips History.debug.xcconfig */,
+				D053D1FC0855C10DF506FF46 /* Pods-Trips History.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +234,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68261C8A2B03941D002DCC57 /* Build configuration list for PBXNativeTarget "Trips History" */;
 			buildPhases = (
+				CF2732B19373C8617ABA4983 /* [CP] Check Pods Manifest.lock */,
 				68261C6F2B03941C002DCC57 /* Sources */,
 				68261C702B03941C002DCC57 /* Frameworks */,
 				68261C712B03941C002DCC57 /* Resources */,
@@ -128,23 +286,67 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68DF73F62B039BCF0084BB44 /* neshan.license in Resources */,
+				68DF740D2B04049D0084BB44 /* FriendCell.xib in Resources */,
 				68261C862B03941D002DCC57 /* LaunchScreen.storyboard in Resources */,
 				68261C832B03941D002DCC57 /* Assets.xcassets in Resources */,
+				689F78C52B06A2D60061431B /* map.png in Resources */,
+				68164EBC2B05738300C89439 /* map-red-pin.png in Resources */,
+				68DF74132B04AB740084BB44 /* NewFriendFotter.xib in Resources */,
 				68261C7E2B03941C002DCC57 /* Main.storyboard in Resources */,
+				68164EBD2B05738300C89439 /* map-green-pin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CF2732B19373C8617ABA4983 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Trips History-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		68261C6F2B03941C002DCC57 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68261C7B2B03941C002DCC57 /* ViewController.swift in Sources */,
+				68164EA22B0506D300C89439 /* CoreDataHelper.swift in Sources */,
+				68DF740B2B0404100084BB44 /* FriendCell.swift in Sources */,
+				68DF74112B04AB540084BB44 /* NewFriendFotter.swift in Sources */,
+				68261C7B2B03941C002DCC57 /* MainViewController.swift in Sources */,
+				689F78C92B07FCB30061431B /* CustomeNeshanMapView.swift in Sources */,
+				689F78C12B0694570061431B /* LocationManager.swift in Sources */,
+				68DF73FF2B03E16A0084BB44 /* TripsListViewController.swift in Sources */,
+				689F78D02B082C820061431B /* SceneDelegate.swift in Sources */,
 				68261C812B03941C002DCC57 /* Trips_History.xcdatamodeld in Sources */,
+				68164EB82B0559AF00C89439 /* AlertHelper.swift in Sources */,
+				689F78C32B0694B70061431B /* LocationViewModel.swift in Sources */,
+				68DF73F92B03CC460084BB44 /* NeshanHelper.m in Sources */,
+				68164EB62B05411500C89439 /* TripViewModel.swift in Sources */,
 				68261C772B03941C002DCC57 /* AppDelegate.swift in Sources */,
-				68261C792B03941C002DCC57 /* SceneDelegate.swift in Sources */,
+				68DF740F2B040B420084BB44 /* PersonViewModel.swift in Sources */,
+				68164EA02B04CE4E00C89439 /* ContactHelper.swift in Sources */,
+				68DF73FD2B03CF900084BB44 /* TripViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +488,7 @@
 		};
 		68261C8B2B03941D002DCC57 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94B0B61B4D6F74B7C7E15BBA /* Pods-Trips History.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -299,6 +502,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,13 +511,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "hamid.neshan.Trips-History";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Trips History/Trips-History-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		68261C8C2B03941D002DCC57 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D053D1FC0855C10DF506FF46 /* Pods-Trips History.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -327,6 +533,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,8 +542,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "hamid.neshan.Trips-History";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Trips History/Trips-History-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
