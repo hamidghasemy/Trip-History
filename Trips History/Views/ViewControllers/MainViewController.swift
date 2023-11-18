@@ -12,13 +12,19 @@ class MainViewController: UIViewController {
     //Views
     @IBOutlet weak var map : CustomeNeshanMapView!
     @IBOutlet weak var newEditButton: UIButton!
+    @IBOutlet weak var addressLabel: UILabel!
     
     //Model Views
     let locationViewModel = LocationViewModel()
     let tripViewModel = TripViewModel()
+    let neshanApiViewModel = NeshanApiViewModel()
     
     var newTripLocation : NTLngLat?
     var contactHelper : ContactHelper!
+    
+    private var tripsMarker = [NTMarker]()
+    private var selectedMarker : NTMarker?
+    private var currentMarker : NTMarker?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,14 +39,16 @@ class MainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) { updateTripsOnMap() }
     
     func initObservers(){
-        tripViewModel.onTripArrayUpdate = {
-            self.updateTripsOnMap()
-            self.locationViewModel.requestLocationUpdate()
-        }
+        tripViewModel.onTripArrayUpdate = { self.updateTripsOnMap() }
         
         locationViewModel.locationUpdateHandler = { [weak self] location in
             self?.updateCurrentOnMap(location: NTLngLat(x:location.coordinate.longitude , y:location.coordinate.latitude))
             self?.locationViewModel.stopLocationUpdate()
+        }
+        
+        neshanApiViewModel.onReadyAddress = { address in
+            self.addressLabel.isHidden = false
+            self.addressLabel.text = address
         }
     }
     
@@ -48,12 +56,12 @@ class MainViewController: UIViewController {
         map.initMap(cameraLocation: CustomeNeshanMapView.MASHHAD!, zoom: 13, style: NTNeshanMapStyle.STANDARD_NIGHT)
         
         let mapEventListener = MapEventListener()
-        mapEventListener?.onMapClickedBlock =  { clickInfo in
+        mapEventListener?.onMapClickedBlock =  { [self] clickInfo in
             if clickInfo.getClickType() == NTClickType.CLICK_TYPE_LONG {
-                self.updateTripsOnMap()
-                self.newTripLocation = clickInfo.getClickPos()
-                self.map.addMarker(loc: self.newTripLocation!, markerImage: CustomeNeshanMapView.MARKER_IMAGE_3)
-                self.locationViewModel.requestLocationUpdate()
+                newTripLocation = clickInfo.getClickPos()
+                if let marker = selectedMarker { map.removeMarker(marker: marker)}
+                selectedMarker = map.addMarker(loc: newTripLocation!, markerImage: CustomeNeshanMapView.MARKER_IMAGE_3)
+                if let location = newTripLocation { neshanApiViewModel.neshanReverseAPI(location: location) }
             }
         }
         map.setMapEventListener(mapEventListener)
@@ -67,6 +75,8 @@ class MainViewController: UIViewController {
                     destination.newTripLong = location.getY()
                     destination.tripViewModel = tripViewModel
                     newTripLocation = nil
+                    addressLabel.isHidden = true
+                    if let marker = selectedMarker { map.removeMarker(marker: marker) }
                 }
                 else{
                     AlertHelper.showAlert(message: "First select trip location by long click on the map", title: "Location is not Selected!", vc: self)
@@ -77,17 +87,21 @@ class MainViewController: UIViewController {
     }
     
     func updateTripsOnMap(){
-        map.markerLayer.clear()
+        for marker in tripsMarker{ map.removeMarker(marker:marker) }
+        tripsMarker.removeAll()
         let trips = tripViewModel.getAll()
         for trip in trips {
             if let location = NTLngLat(x: trip.latuide, y: trip.longtuide){
-                map.addMarker(loc: location, markerImage: CustomeNeshanMapView.MARKER_IMAGE_2)
+                if let marker = map.addMarker(loc: location, markerImage: CustomeNeshanMapView.MARKER_IMAGE_2) {
+                    tripsMarker.append(marker)
+                }
             }
         }
     }
     
     func updateCurrentOnMap(location : NTLngLat){
-        map.addMarker(loc: location, markerImage: CustomeNeshanMapView.MARKER_IMAGE_1)
+        if let marker = currentMarker { map.removeMarker(marker: marker) }
+        currentMarker = map.addMarker(loc: location, markerImage: CustomeNeshanMapView.MARKER_IMAGE_1)
         map.setCamera(location: location)
     }
     

@@ -24,6 +24,10 @@
 		689F78C52B06A2D60061431B /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 689F78C42B06A2D60061431B /* map.png */; };
 		689F78C92B07FCB30061431B /* CustomeNeshanMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F78C82B07FCB30061431B /* CustomeNeshanMapView.swift */; };
 		689F78D02B082C820061431B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F78CF2B082C820061431B /* SceneDelegate.swift */; };
+		689F78D22B0841B70061431B /* NeshanRequestMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F78D12B0841B70061431B /* NeshanRequestMaker.swift */; };
+		689F78D42B084B760061431B /* NeshanApiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F78D32B084B760061431B /* NeshanApiViewModel.swift */; };
+		689F78D62B0851990061431B /* NeshanUrlMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F78D52B0851990061431B /* NeshanUrlMaker.swift */; };
+		689F78D92B085AC00061431B /* NeshanApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F78D82B085AC00061431B /* NeshanApiManager.swift */; };
 		68DF73F62B039BCF0084BB44 /* neshan.license in Resources */ = {isa = PBXBuildFile; fileRef = 68DF73F52B039BCF0084BB44 /* neshan.license */; };
 		68DF73F92B03CC460084BB44 /* NeshanHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DF73F82B03CC460084BB44 /* NeshanHelper.m */; };
 		68DF73FD2B03CF900084BB44 /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DF73FC2B03CF900084BB44 /* TripViewController.swift */; };
@@ -57,6 +61,10 @@
 		689F78C42B06A2D60061431B /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		689F78C82B07FCB30061431B /* CustomeNeshanMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeNeshanMapView.swift; sourceTree = "<group>"; };
 		689F78CF2B082C820061431B /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		689F78D12B0841B70061431B /* NeshanRequestMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeshanRequestMaker.swift; sourceTree = "<group>"; };
+		689F78D32B084B760061431B /* NeshanApiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeshanApiViewModel.swift; sourceTree = "<group>"; };
+		689F78D52B0851990061431B /* NeshanUrlMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeshanUrlMaker.swift; sourceTree = "<group>"; };
+		689F78D82B085AC00061431B /* NeshanApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeshanApiManager.swift; sourceTree = "<group>"; };
 		68DF73F42B039AAB0084BB44 /* Trips-History-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Trips-History-Bridging-Header.h"; sourceTree = "<group>"; };
 		68DF73F52B039BCF0084BB44 /* neshan.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = neshan.license; sourceTree = "<group>"; };
 		68DF73F72B03CC460084BB44 /* NeshanHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeshanHelper.h; sourceTree = "<group>"; };
@@ -145,6 +153,7 @@
 		689F78BF2B0686A40061431B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				689F78D72B08592D0061431B /* Neshan API Service */,
 				689F78C02B0694570061431B /* LocationManager.swift */,
 			);
 			path = Services;
@@ -190,6 +199,16 @@
 			path = "Map Pins";
 			sourceTree = "<group>";
 		};
+		689F78D72B08592D0061431B /* Neshan API Service */ = {
+			isa = PBXGroup;
+			children = (
+				689F78D12B0841B70061431B /* NeshanRequestMaker.swift */,
+				689F78D52B0851990061431B /* NeshanUrlMaker.swift */,
+				689F78D82B085AC00061431B /* NeshanApiManager.swift */,
+			);
+			path = "Neshan API Service";
+			sourceTree = "<group>";
+		};
 		68DF74022B03EC790084BB44 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +225,7 @@
 				68DF740E2B040B420084BB44 /* PersonViewModel.swift */,
 				68164EB52B05411500C89439 /* TripViewModel.swift */,
 				689F78C22B0694B70061431B /* LocationViewModel.swift */,
+				689F78D32B084B760061431B /* NeshanApiViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -330,12 +350,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				689F78D42B084B760061431B /* NeshanApiViewModel.swift in Sources */,
 				68164EA22B0506D300C89439 /* CoreDataHelper.swift in Sources */,
 				68DF740B2B0404100084BB44 /* FriendCell.swift in Sources */,
 				68DF74112B04AB540084BB44 /* NewFriendFotter.swift in Sources */,
 				68261C7B2B03941C002DCC57 /* MainViewController.swift in Sources */,
 				689F78C92B07FCB30061431B /* CustomeNeshanMapView.swift in Sources */,
 				689F78C12B0694570061431B /* LocationManager.swift in Sources */,
+				689F78D62B0851990061431B /* NeshanUrlMaker.swift in Sources */,
 				68DF73FF2B03E16A0084BB44 /* TripsListViewController.swift in Sources */,
 				689F78D02B082C820061431B /* SceneDelegate.swift in Sources */,
 				68261C812B03941C002DCC57 /* Trips_History.xcdatamodeld in Sources */,
@@ -347,6 +369,8 @@
 				68DF740F2B040B420084BB44 /* PersonViewModel.swift in Sources */,
 				68164EA02B04CE4E00C89439 /* ContactHelper.swift in Sources */,
 				68DF73FD2B03CF900084BB44 /* TripViewController.swift in Sources */,
+				689F78D22B0841B70061431B /* NeshanRequestMaker.swift in Sources */,
+				689F78D92B085AC00061431B /* NeshanApiManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
